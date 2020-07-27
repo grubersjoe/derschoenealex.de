@@ -1,23 +1,70 @@
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<html>
-<head>
-<style type="text/css">
-@keyframes rainbow {
-  0% {color: red}
-  20% {color: orange}
-  40% {color: yellow}
-  60% {color: lime}
-  80% {color: blue}
-  100% {color: indigo}
-}
-body {background-image: url("penguins.gif")}
-h1 {font-family: "Comic Sans MS", "Comic Neue", sans-serif; font-size: 128px; font-weight: bold;}
-.rainbow {animation-name: rainbow; animation-duration: 10s; animation-iteration-count: infinite; animation-direction: alternate;}
-</style>
-<title>(ノ^o^)ノ  ヾ(-_- )ゞ</title>
-</head>
-<body>
-<marquee class="rainbow"><h1>Alles Gute, Alex!</h1></marquee>
-<center><img src="just_kill_me.gif" alt="(∗｀▼´)ﾉ.｡.:*･"></center>
-</body>
-</html>
+<!DOCTYPE html>
+<HTML lang="en">
+  <HEAD>
+    <META charset="utf-8" />
+    <META http-equiv="x-ua-compatible" content="ie=edge" />
+    <META name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>ALLES GUTE, ALEX!!</title>
+
+    <link rel="icon" href="img/favicon.gif" />
+    <style>
+      html, body { height: 100%; }
+body { font-family: serif; background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);}
+h1 { font-size: 113px; font-family: "Comic Sans MS", "Comic Neue", sans-serif; }
+#myHeading { position: absolute; top: 10px; left: 0; transition: all 200ms ease-in-out; white-space: nowrap; text-shadow: 12px 20px 50px blue, 3px 2px 0px yellow;  }
+body > div { position: fixed;  bottom: 1em;}
+    </style>
+  </HEAD>
+
+  <BODY>
+    <H1 id="myHeading">Alles Gute, Alex!</H1>
+        <IMG src="img/dankeschoen.gif" style="margin: 200px 200px;">
+        <IMG src="img/penguins.gif" style="margin-let: 200px;">
+
+<div style="position: fixed; bottom: 11px; right: 2em;"><img src='https://www.counter12.com/img-wzzaZd7aaZB62dCz-5.gif' border='0' alt='free web counter'><script type='text/javascript' src='https://www.counter12.com/ad.js?id=wzzaZd7aaZB62dCz'></script></div>
+
+    <DIV>
+      powered by
+    <IMG src="img/jquery.png" alt="This page is powered by jquery!!1" width="280">
+    <IMG src="img/bower.gif">
+    <MARQUEE>mobile first</MARQUEE>
+    </DIV>
+
+    <SCRIPT src="bower_components/jquery/dist/jquery.min.js"></SCRIPT>
+    <SCRIPT>
+      $( document ).ready( function() {
+    console.log( "ready!" );
+    var $jquery_my_heading = $('#myHeading');
+
+    $jquery_my_heading.slideDown();
+
+    WIDTH = $( document ).width(); HEIGHT = $( document ).height();
+
+    function function_tick() {
+        offset = $jquery_my_heading.offset();
+
+        if (Math.random() <= 0.5) {
+            symbol1 = '+';
+          } else {
+            symbol1 = '-';
+          }
+          if (Math.random() < 0.5) {
+            symbol2 = '+';
+          } else
+            symbol2 = '-';
+
+           var left = eval('offset.left ' + symbol1 + ' Math.random() * 300') ;
+          var top = eval('offset.top ' + symbol2 + ' Math.random() * 300');
+          if (offset.left > WIDTH) left = WIDTH - 400;
+          if (offset.left < 0) left = 400;
+          if (offset.top > HEIGHT) top = HEIGHT - 200;
+          if (offset.top < 0) top = 180;
+
+          $jquery_my_heading.offset( { left: left, top: top })
+    }
+    setInterval( function_tick, Math.random() * 600 + 1000 ); // performance!
+} );
+    </SCRIPT>
+  </BODY>
+</HTML>
